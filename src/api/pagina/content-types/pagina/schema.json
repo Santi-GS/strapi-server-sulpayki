@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paginas",
+  "info": {
+    "singularName": "pagina",
+    "pluralName": "paginas",
+    "displayName": "Pagina",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.preguntas-frecuentes",
+        "block.markdown",
+        "block.encabezado-de-seccion",
+        "block.contenido-con-imagen",
+        "block.destinos-destacados"
+      ]
+    }
+  }
+}

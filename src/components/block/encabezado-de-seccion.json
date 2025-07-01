@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_block_encabezado_de_seccions",
+  "info": {
+    "displayName": "Encabezado de Seccion"
+  },
+  "options": {},
+  "attributes": {
+    "encabezado": {
+      "type": "string"
+    },
+    "subencabezado": {
+      "type": "string"
+    },
+    "anchorLink": {
+      "type": "string"
+    }
+  }
+}

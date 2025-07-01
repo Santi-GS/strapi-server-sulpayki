@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_block_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link",
+      "required": true
+    },
+    "carruselHero": {
+      "type": "component",
+      "repeatable": true,
+      "component": "block.card-grid",
+      "required": true
+    }
+  }
+}

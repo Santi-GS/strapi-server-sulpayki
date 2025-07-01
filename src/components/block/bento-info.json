@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_block_bento_infos",
+  "info": {
+    "displayName": "BentoInfo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bentoComponent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.bento-component"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.hero",
+        "block.contenido-con-imagen",
+        "block.encabezado-de-seccion",
+        "block.markdown",
+        "block.preguntas-frecuentes",
+        "block.bento-info",
+        "block.destinos-destacados",
+        "block.eventos-destacados"
+      ]
+    }
+  }
+}

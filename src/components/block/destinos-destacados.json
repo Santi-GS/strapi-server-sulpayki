@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_block_destinos_destacados",
+  "info": {
+    "displayName": "Destinos Destacados"
+  },
+  "options": {},
+  "attributes": {
+    "articulo_destinos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

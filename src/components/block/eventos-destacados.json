@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_block_eventos_destacados",
+  "info": {
+    "displayName": "Eventos Destacados"
+  },
+  "options": {},
+  "attributes": {
+    "articulo_eventos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::articulo-evento.articulo-evento"
+    }
+  }
+}

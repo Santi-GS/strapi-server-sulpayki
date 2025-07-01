@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_block_preguntas_frecuentes",
+  "info": {
+    "displayName": "Preguntas Frecuentes",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pyr": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.py-r",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Articulo Destino",
+    "description": "Create your blog content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 80
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "coverImagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.markdown",
+        "block.preguntas-frecuentes",
+        "block.encabezado-de-seccion",
+        "block.contenido-con-imagen",
+        "block.eventos-destacados",
+        "block.destinos-destacados"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_block_contenido_con_imagens",
+  "info": {
+    "displayName": "Contenido con Imagen",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "texto": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "invertido": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_bento_components",
+  "info": {
+    "displayName": "Bento Component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link-simple"
+    }
+  }
+}

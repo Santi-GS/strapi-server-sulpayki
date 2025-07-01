@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulo_eventos",
+  "info": {
+    "singularName": "articulo-evento",
+    "pluralName": "articulo-eventos",
+    "displayName": "Articulo Evento",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "coverImagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.markdown",
+        "block.preguntas-frecuentes",
+        "block.encabezado-de-seccion",
+        "block.destinos-destacados",
+        "block.contenido-con-imagen",
+        "block.eventos-destacados"
+      ]
+    }
+  }
+}

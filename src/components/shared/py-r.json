@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_py_rs",
+  "info": {
+    "displayName": "PyR",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pregunta": {
+      "type": "string",
+      "required": true
+    },
+    "respuesta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.markdown",
+      "required": true
+    }
+  }
+}

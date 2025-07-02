@@ -1,7 +1,8 @@
 import path from 'path';
 
 export default ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
+  // En Strapi Cloud, usar PostgreSQL por defecto
+  const client = env('DATABASE_CLIENT', env('NODE_ENV') === 'production' ? 'postgres' : 'sqlite');
 
   const connections = {
     mysql: {

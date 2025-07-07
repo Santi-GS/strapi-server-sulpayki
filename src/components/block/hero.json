@@ -10,20 +10,16 @@
       "type": "string",
       "required": true
     },
-    "text": {
-      "type": "richtext",
-      "required": true
-    },
     "links": {
       "type": "component",
-      "repeatable": true,
       "component": "shared.link",
+      "repeatable": true,
       "required": true
     },
     "carruselHero": {
       "type": "component",
-      "repeatable": true,
       "component": "block.card-grid",
+      "repeatable": true,
       "required": true
     }
   }

@@ -1,21 +1,21 @@
 {
   "kind": "collectionType",
-  "collectionName": "articulo_eventos",
+  "collectionName": "servicio_de_turismos",
   "info": {
-    "singularName": "articulo-evento",
-    "pluralName": "articulo-eventos",
-    "displayName": "Articulo Evento",
-    "description": ""
+    "singularName": "servicio-de-turismo",
+    "pluralName": "servicio-de-turismos",
+    "displayName": "Servicio de Turismo"
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "titulo": {
       "type": "string"
     },
     "descripcion": {
-      "type": "string"
+      "type": "text"
     },
     "slug": {
       "type": "uid",
@@ -24,7 +24,6 @@
     "coverImagen": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -37,12 +36,12 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
+        "block.contenido-con-imagen",
+        "block.destinos-destacados",
+        "block.encabezado-de-seccion",
         "block.markdown",
         "block.preguntas-frecuentes",
-        "block.encabezado-de-seccion",
-        "block.destinos-destacados",
-        "block.contenido-con-imagen",
-        "block.eventos-destacados"
+        "block.card-grid"
       ]
     }
   }

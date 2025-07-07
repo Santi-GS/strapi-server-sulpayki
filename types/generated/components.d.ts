@@ -65,19 +65,6 @@ export interface BlockEncabezadoDeSeccion extends Struct.ComponentSchema {
   };
 }
 
-export interface BlockEventosDestacados extends Struct.ComponentSchema {
-  collectionName: 'components_block_eventos_destacados';
-  info: {
-    displayName: 'Eventos Destacados';
-  };
-  attributes: {
-    articulo_eventos: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::articulo-evento.articulo-evento'
-    >;
-  };
-}
-
 export interface BlockHero extends Struct.ComponentSchema {
   collectionName: 'components_block_heroes';
   info: {
@@ -90,7 +77,6 @@ export interface BlockHero extends Struct.ComponentSchema {
     heading: Schema.Attribute.String & Schema.Attribute.Required;
     links: Schema.Attribute.Component<'shared.link', true> &
       Schema.Attribute.Required;
-    text: Schema.Attribute.RichText & Schema.Attribute.Required;
   };
 }
 
@@ -114,6 +100,19 @@ export interface BlockPreguntasFrecuentes extends Struct.ComponentSchema {
   attributes: {
     pyr: Schema.Attribute.Component<'shared.py-r', true> &
       Schema.Attribute.Required;
+  };
+}
+
+export interface BlockServiciosDestacados extends Struct.ComponentSchema {
+  collectionName: 'components_block_servicios_destacados';
+  info: {
+    displayName: 'Servicios Destacados';
+  };
+  attributes: {
+    servicio_de_turismos: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::servicio-de-turismo.servicio-de-turismo'
+    >;
   };
 }
 
@@ -204,10 +203,10 @@ declare module '@strapi/strapi' {
       'block.contenido-con-imagen': BlockContenidoConImagen;
       'block.destinos-destacados': BlockDestinosDestacados;
       'block.encabezado-de-seccion': BlockEncabezadoDeSeccion;
-      'block.eventos-destacados': BlockEventosDestacados;
       'block.hero': BlockHero;
       'block.markdown': BlockMarkdown;
       'block.preguntas-frecuentes': BlockPreguntasFrecuentes;
+      'block.servicios-destacados': BlockServiciosDestacados;
       'shared.bento-component': SharedBentoComponent;
       'shared.card': SharedCard;
       'shared.link': SharedLink;

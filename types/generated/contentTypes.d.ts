@@ -391,66 +391,19 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'block.preguntas-frecuentes',
         'block.encabezado-de-seccion',
         'block.contenido-con-imagen',
-        'block.eventos-destacados',
         'block.destinos-destacados',
+        'block.servicios-destacados',
       ]
     >;
     coverImagen: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    descripcion: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
+    descripcion: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::article.article'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'titulo'>;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
-    titulo: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiArticuloEventoArticuloEvento
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'articulo_eventos';
-  info: {
-    description: '';
-    displayName: 'Articulo Evento';
-    pluralName: 'articulo-eventos';
-    singularName: 'articulo-evento';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      [
-        'block.markdown',
-        'block.preguntas-frecuentes',
-        'block.encabezado-de-seccion',
-        'block.destinos-destacados',
-        'block.contenido-con-imagen',
-        'block.eventos-destacados',
-      ]
-    >;
-    coverImagen: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    descripcion: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::articulo-evento.articulo-evento'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -484,7 +437,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'block.preguntas-frecuentes',
         'block.bento-info',
         'block.destinos-destacados',
-        'block.eventos-destacados',
+        'block.servicios-destacados',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -538,6 +491,49 @@ export interface ApiPaginaPagina extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'titulo'>;
+    titulo: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicioDeTurismoServicioDeTurismo
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'servicio_de_turismos';
+  info: {
+    displayName: 'Servicio de Turismo';
+    pluralName: 'servicio-de-turismos';
+    singularName: 'servicio-de-turismo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'block.contenido-con-imagen',
+        'block.destinos-destacados',
+        'block.encabezado-de-seccion',
+        'block.markdown',
+        'block.preguntas-frecuentes',
+        'block.card-grid',
+      ]
+    >;
+    coverImagen: Schema.Attribute.Media<'images'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descripcion: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::servicio-de-turismo.servicio-de-turismo'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'titulo'>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     titulo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1081,9 +1077,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
-      'api::articulo-evento.articulo-evento': ApiArticuloEventoArticuloEvento;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::pagina.pagina': ApiPaginaPagina;
+      'api::servicio-de-turismo.servicio-de-turismo': ApiServicioDeTurismoServicioDeTurismo;
       'api::tag.tag': ApiTagTag;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -64,9 +64,9 @@ const populate = {
           },
         }
       },
-      "block.eventos-destacados":{
+      "block.servicios-destacados":{
         populate:{
-          articulo_eventos:{
+          servicio_de_turismos:{
             populate: {
             coverImagen:{
               fields: ["alternativeText", "url"]

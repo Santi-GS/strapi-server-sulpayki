@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_block_servicios_destacados",
+  "info": {
+    "displayName": "Servicios Destacados"
+  },
+  "options": {},
+  "attributes": {
+    "servicio_de_turismos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio-de-turismo.servicio-de-turismo"
+    }
+  },
+  "config": {}
+}

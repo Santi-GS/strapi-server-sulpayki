@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
@@ -27,7 +28,7 @@
         "block.preguntas-frecuentes",
         "block.bento-info",
         "block.destinos-destacados",
-        "block.eventos-destacados"
+        "block.servicios-destacados"
       ]
     }
   }

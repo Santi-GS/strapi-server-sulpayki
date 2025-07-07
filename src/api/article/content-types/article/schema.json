@@ -16,8 +16,7 @@
       "type": "string"
     },
     "descripcion": {
-      "type": "text",
-      "maxLength": 80
+      "type": "text"
     },
     "slug": {
       "type": "uid",
@@ -33,6 +32,11 @@
         "videos"
       ]
     },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": [
@@ -40,14 +44,9 @@
         "block.preguntas-frecuentes",
         "block.encabezado-de-seccion",
         "block.contenido-con-imagen",
-        "block.eventos-destacados",
-        "block.destinos-destacados"
+        "block.destinos-destacados",
+        "block.servicios-destacados"
       ]
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
     }
   }
 }

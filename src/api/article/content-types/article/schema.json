@@ -45,7 +45,8 @@
         "block.encabezado-de-seccion",
         "block.contenido-con-imagen",
         "block.destinos-destacados",
-        "block.servicios-destacados"
+        "block.servicios-destacados",
+        "block.carrusel-de-imagenes"
       ]
     }
   }

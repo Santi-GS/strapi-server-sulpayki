@@ -393,6 +393,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'block.contenido-con-imagen',
         'block.destinos-destacados',
         'block.servicios-destacados',
+        'block.carrusel-de-imagenes',
       ]
     >;
     coverImagen: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
@@ -517,7 +518,8 @@ export interface ApiServicioDeTurismoServicioDeTurismo
         'block.encabezado-de-seccion',
         'block.markdown',
         'block.preguntas-frecuentes',
-        'block.card-grid',
+        'block.servicios-destacados',
+        'block.carrusel-de-imagenes',
       ]
     >;
     coverImagen: Schema.Attribute.Media<'images'>;

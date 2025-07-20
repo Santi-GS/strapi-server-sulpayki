@@ -25,6 +25,16 @@ export interface BlockCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface BlockCarruselDeImagenes extends Struct.ComponentSchema {
+  collectionName: 'components_block_carrusel_de_imagenes';
+  info: {
+    displayName: 'Carrusel de imagenes';
+  };
+  attributes: {
+    imagen: Schema.Attribute.Component<'shared.imagen', true>;
+  };
+}
+
 export interface BlockContenidoConImagen extends Struct.ComponentSchema {
   collectionName: 'components_block_contenido_con_imagens';
   info: {
@@ -141,6 +151,17 @@ export interface SharedCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedImagen extends Struct.ComponentSchema {
+  collectionName: 'components_shared_imagens';
+  info: {
+    displayName: 'Imagen';
+  };
+  attributes: {
+    imagen: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -200,6 +221,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'block.bento-info': BlockBentoInfo;
       'block.card-grid': BlockCardGrid;
+      'block.carrusel-de-imagenes': BlockCarruselDeImagenes;
       'block.contenido-con-imagen': BlockContenidoConImagen;
       'block.destinos-destacados': BlockDestinosDestacados;
       'block.encabezado-de-seccion': BlockEncabezadoDeSeccion;
@@ -209,6 +231,7 @@ declare module '@strapi/strapi' {
       'block.servicios-destacados': BlockServiciosDestacados;
       'shared.bento-component': SharedBentoComponent;
       'shared.card': SharedCard;
+      'shared.imagen': SharedImagen;
       'shared.link': SharedLink;
       'shared.link-simple': SharedLinkSimple;
       'shared.logo-link': SharedLogoLink;

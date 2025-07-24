@@ -28,7 +28,8 @@
         "block.preguntas-frecuentes",
         "block.bento-info",
         "block.destinos-destacados",
-        "block.servicios-destacados"
+        "block.servicios-destacados",
+        "block.tarjeta-paquete-turistico"
       ]
     }
   }

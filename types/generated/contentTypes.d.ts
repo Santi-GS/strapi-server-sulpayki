@@ -394,6 +394,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'block.destinos-destacados',
         'block.servicios-destacados',
         'block.carrusel-de-imagenes',
+        'block.tarjeta-paquete-turistico',
       ]
     >;
     coverImagen: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
@@ -439,6 +440,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'block.bento-info',
         'block.destinos-destacados',
         'block.servicios-destacados',
+        'block.tarjeta-paquete-turistico',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -520,6 +522,7 @@ export interface ApiServicioDeTurismoServicioDeTurismo
         'block.preguntas-frecuentes',
         'block.servicios-destacados',
         'block.carrusel-de-imagenes',
+        'block.tarjeta-paquete-turistico',
       ]
     >;
     coverImagen: Schema.Attribute.Media<'images'>;

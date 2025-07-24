@@ -126,6 +126,23 @@ export interface BlockServiciosDestacados extends Struct.ComponentSchema {
   };
 }
 
+export interface BlockTarjetaPaqueteTuristico extends Struct.ComponentSchema {
+  collectionName: 'components_block_tarjeta_paquete_turisticos';
+  info: {
+    displayName: 'Tarjeta Paquete Turistico';
+  };
+  attributes: {
+    articulo_destinos: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    >;
+    servicio_de_turismos: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::servicio-de-turismo.servicio-de-turismo'
+    >;
+  };
+}
+
 export interface SharedBentoComponent extends Struct.ComponentSchema {
   collectionName: 'components_shared_bento_components';
   info: {
@@ -229,6 +246,7 @@ declare module '@strapi/strapi' {
       'block.markdown': BlockMarkdown;
       'block.preguntas-frecuentes': BlockPreguntasFrecuentes;
       'block.servicios-destacados': BlockServiciosDestacados;
+      'block.tarjeta-paquete-turistico': BlockTarjetaPaqueteTuristico;
       'shared.bento-component': SharedBentoComponent;
       'shared.card': SharedCard;
       'shared.imagen': SharedImagen;

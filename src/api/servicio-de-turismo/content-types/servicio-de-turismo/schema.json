@@ -42,7 +42,8 @@
         "block.markdown",
         "block.preguntas-frecuentes",
         "block.servicios-destacados",
-        "block.carrusel-de-imagenes"
+        "block.carrusel-de-imagenes",
+        "block.tarjeta-paquete-turistico"
       ]
     }
   }

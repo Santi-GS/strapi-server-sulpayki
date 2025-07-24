@@ -65,6 +65,26 @@ const populate = {
                     }
                 }
             },
+            "block.tarjeta-paquete-turistico":{
+                populate:{
+                    articulo_destinos:{
+                        populate: {
+                            coverImagen:{
+                            fields: ["alternativeText", "url"]
+                            },
+                            tags: true,
+                        },            
+                    },
+                    servicio_de_turismos:{
+                        populate: {
+                            coverImagen:{
+                            fields: ["alternativeText", "url"]
+                            },
+                            tags: true,
+                        },            
+                    },
+                }
+            },
         }
     }
 };

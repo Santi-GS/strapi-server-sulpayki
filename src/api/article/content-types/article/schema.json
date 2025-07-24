@@ -46,7 +46,8 @@
         "block.contenido-con-imagen",
         "block.destinos-destacados",
         "block.servicios-destacados",
-        "block.carrusel-de-imagenes"
+        "block.carrusel-de-imagenes",
+        "block.tarjeta-paquete-turistico"
       ]
     }
   }
